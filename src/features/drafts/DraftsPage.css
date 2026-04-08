@@ -1,0 +1,65 @@
+.drafts-shell {
+  @apply mx-auto flex min-h-[calc(100vh-13rem)] w-full max-w-4xl items-start py-8;
+}
+
+.drafts-card {
+  @apply w-full rounded-[2rem] border p-6 shadow-lg backdrop-blur sm:p-8;
+  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+.drafts-card__header {
+  @apply mb-6;
+}
+
+.drafts-card__back {
+  @apply mb-4 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2;
+}
+
+.drafts-card__eyebrow {
+  @apply text-sm font-semibold uppercase tracking-[0.18em] text-slate-500;
+}
+
+.drafts-card__title {
+  @apply mt-2 text-3xl font-semibold text-slate-900;
+}
+
+.drafts-card__subtitle {
+  @apply mt-3 max-w-2xl text-slate-600;
+}
+
+.drafts-empty {
+  @apply rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6;
+}
+
+.drafts-empty__title {
+  @apply text-base font-semibold text-slate-900;
+}
+
+.drafts-empty__text {
+  @apply mt-2 text-sm leading-6 text-slate-600;
+}
+
+.drafts-list {
+  @apply space-y-3;
+}
+
+.drafts-item {
+  @apply flex items-center justify-between gap-3 rounded-[1.5rem] border border-slate-200 bg-white p-4;
+}
+
+.drafts-item__open {
+  @apply flex flex-1 flex-col items-start text-left transition hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2;
+}
+
+.drafts-item__title {
+  @apply text-base font-semibold text-slate-900;
+}
+
+.drafts-item__meta {
+  @apply mt-1 text-sm text-slate-500;
+}
+
+.drafts-item__delete {
+  @apply rounded-xl px-3 py-2 text-sm font-semibold text-slate-500 transition hover:bg-slate-100 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2;
+}

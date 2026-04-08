@@ -1,0 +1,81 @@
+.messages-shell {
+  @apply mx-auto flex min-h-[calc(100vh-13rem)] w-full max-w-4xl items-start py-8;
+}
+
+.messages-card {
+  @apply w-full rounded-[2rem] border p-6 shadow-lg backdrop-blur sm:p-8;
+  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+.messages-card__header {
+  @apply mb-6;
+}
+
+.messages-card__back {
+  @apply mb-4 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2;
+}
+
+.messages-card__eyebrow {
+  @apply text-sm font-semibold uppercase tracking-[0.18em] text-slate-500;
+}
+
+.messages-card__title {
+  @apply mt-2 text-3xl font-semibold text-slate-900;
+}
+
+.messages-card__subtitle {
+  @apply mt-3 max-w-2xl text-slate-600;
+}
+
+.messages-empty {
+  @apply rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6;
+}
+
+.messages-empty__title {
+  @apply text-base font-semibold text-slate-900;
+}
+
+.messages-empty__text {
+  @apply mt-2 text-sm leading-6 text-slate-600;
+}
+
+.messages-list {
+  @apply space-y-4;
+}
+
+.messages-item {
+  @apply rounded-[1.5rem] border border-slate-200 bg-white p-5;
+}
+
+.messages-item__meta {
+  @apply mb-4;
+}
+
+.messages-item__title {
+  @apply text-base font-semibold text-slate-900;
+}
+
+.messages-item__date {
+  @apply mt-1 text-sm text-slate-500;
+}
+
+.messages-item__body {
+  @apply rounded-[1.25rem] bg-slate-50 p-4;
+}
+
+.messages-item__label {
+  @apply text-xs font-semibold uppercase tracking-[0.16em] text-slate-500;
+}
+
+.messages-item__label--spaced {
+  @apply mt-4;
+}
+
+.messages-item__text {
+  @apply mt-2 text-sm leading-7 text-slate-700;
+}
+
+.messages-item__delete {
+  @apply mt-4 rounded-xl px-3 py-2 text-sm font-semibold text-slate-500 transition hover:bg-slate-100 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2;
+}

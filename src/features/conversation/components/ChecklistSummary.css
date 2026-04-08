@@ -1,0 +1,65 @@
+.summary-card {
+  @apply space-y-5 rounded-3xl border p-5 shadow-lg backdrop-blur sm:p-6;
+  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.summary-card__header {
+  @apply flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between;
+}
+
+.summary-card__title {
+  @apply text-xl font-semibold text-slate-900 sm:text-2xl;
+}
+
+.summary-card__subtitle {
+  @apply mt-2 max-w-2xl text-slate-600;
+}
+
+.summary-grid {
+  @apply grid gap-4;
+}
+
+.summary-panel {
+  @apply rounded-3xl border border-slate-200 bg-slate-50 p-4;
+}
+
+.summary-panel__label {
+  @apply text-xs font-semibold uppercase tracking-[0.16em] text-slate-500;
+}
+
+.summary-panel__text {
+  @apply mt-3 text-sm leading-7 text-slate-700;
+}
+
+.summary-panel__textarea {
+  @apply mt-3 min-h-32 w-full resize-none overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 text-sm leading-7 text-slate-700 outline-none focus:ring-2 focus:ring-sky-100;
+}
+
+.summary-panel__copy {
+  @apply mt-4 rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2;
+}
+
+.summary-list {
+  @apply mt-3 space-y-2 text-sm leading-7 text-slate-700;
+}
+
+.summary-list li {
+  @apply rounded-2xl bg-white px-4 py-3;
+}
+
+.summary-actions {
+  @apply grid gap-3 sm:grid-cols-2;
+}
+
+.summary-actions__primary {
+  @apply rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2;
+}
+
+.summary-actions__secondary {
+  @apply rounded-2xl border border-slate-300 bg-white px-4 py-3 text-center text-sm font-semibold text-slate-700 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2;
+}
+
+.summary-card__error {
+  @apply text-sm text-rose-600;
+}

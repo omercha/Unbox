@@ -1,0 +1,41 @@
+.selection-group {
+  @apply space-y-4 rounded-3xl border p-5 shadow-lg backdrop-blur sm:p-6;
+  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.selection-group__header {
+  @apply flex items-center justify-between gap-3;
+}
+
+.selection-group__title-wrap {
+  @apply flex items-center gap-2;
+}
+
+.selection-group__title {
+  @apply text-base font-semibold tracking-wide text-slate-900 sm:text-lg;
+}
+
+.selection-group__count {
+  @apply rounded-full bg-sky-50 px-2.5 py-1 text-xs font-semibold text-sky-700;
+}
+
+.selection-group__actions {
+  @apply flex items-center gap-2;
+}
+
+.selection-group__toggle {
+  @apply rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2;
+}
+
+.selection-group__items {
+  @apply flex flex-wrap gap-3;
+}
+
+.selection-chip {
+  @apply min-h-12 rounded-full border border-slate-200 bg-white px-5 py-2 text-sm font-medium tracking-wide text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 sm:text-base;
+}
+
+.selection-chip--selected {
+  @apply border-transparent bg-gradient-to-r from-slate-900 via-slate-800 to-sky-700 text-white shadow-md shadow-slate-300/40;
+}

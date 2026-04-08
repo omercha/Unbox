@@ -1,0 +1,23 @@
+.audience-grid {
+  @apply mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4;
+}
+
+.audience-card {
+  @apply rounded-3xl border border-slate-200 bg-white px-5 py-5 text-left transition duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2;
+}
+
+.audience-card--selected {
+  @apply border-transparent bg-gradient-to-br from-slate-900 via-slate-800 to-sky-700 text-white shadow-lg shadow-slate-300/40;
+}
+
+.audience-card__label {
+  @apply block text-base font-semibold;
+}
+
+.audience-card__description {
+  @apply mt-2 block text-sm leading-6 text-slate-500;
+}
+
+.audience-card--selected .audience-card__description {
+  @apply text-slate-200;
+}

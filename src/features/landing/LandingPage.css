@@ -1,0 +1,231 @@
+.landing-shell {
+  @apply space-y-10 py-8;
+}
+
+.landing-hero {
+  @apply flex min-h-[calc(100vh-13rem)] items-center;
+}
+
+.landing-grid {
+  @apply mx-auto grid w-full max-w-6xl items-center gap-6 lg:grid-cols-[1fr_1fr];
+}
+
+.landing-copy {
+  @apply min-w-0 space-y-6;
+}
+
+.landing-copy__intro {
+  @apply space-y-5;
+}
+
+.landing-copy__title {
+  @apply max-w-3xl text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl lg:text-6xl;
+}
+
+.landing-copy__text {
+  @apply max-w-2xl text-lg leading-8 text-slate-600;
+}
+
+.landing-copy__actions {
+  @apply flex w-full max-w-[32rem] flex-col gap-3;
+}
+
+.landing-copy__cta {
+  @apply w-full rounded-full bg-slate-900 px-7 py-4 text-center text-base font-semibold text-white shadow-lg shadow-slate-300/60 transition duration-200 hover:-translate-y-1 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2;
+}
+
+.landing-copy__secondary-row {
+  @apply grid gap-3 sm:grid-cols-2;
+}
+
+.landing-copy__secondary {
+  @apply w-full rounded-full border border-slate-200 bg-white/85 px-5 py-4 text-center text-sm font-semibold text-slate-700 shadow-sm transition duration-200 hover:-translate-y-1 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2;
+}
+
+.landing-feature-marquee {
+  @apply relative w-full max-w-2xl overflow-hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.landing-feature-track {
+  @apply flex w-max gap-3;
+  animation: landing-feature-scroll 24s linear infinite;
+}
+
+.landing-feature-card {
+  @apply min-h-[8.75rem] w-[13.5rem] shrink-0 rounded-3xl border p-4 shadow-sm backdrop-blur;
+  border-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.landing-feature-card__title {
+  @apply text-sm font-semibold text-slate-900;
+}
+
+.landing-feature-card__text {
+  @apply mt-2 text-sm leading-6 text-slate-600;
+}
+
+.landing-copy__disclaimer {
+  @apply max-w-2xl text-xs leading-6 text-slate-400;
+}
+
+.landing-copy__anchor {
+  @apply inline-flex text-sm font-medium text-slate-600 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900;
+}
+
+.landing-preview {
+  @apply min-w-0 lg:pl-0;
+}
+
+.landing-preview__window {
+  @apply rounded-[2.25rem] border p-7 backdrop-blur;
+  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 32px 90px -36px rgba(15, 23, 42, 0.35);
+}
+
+.landing-preview__header {
+  @apply mb-6 flex items-center justify-between;
+}
+
+.landing-preview__eyebrow {
+  @apply text-sm font-semibold uppercase tracking-[0.18em] text-slate-500;
+}
+
+.landing-preview__title {
+  @apply mt-1 text-2xl font-semibold text-slate-900;
+}
+
+.landing-preview__lights {
+  @apply flex gap-2;
+}
+
+.landing-preview__light {
+  @apply h-3 w-3 rounded-full;
+}
+
+.landing-preview__light--rose {
+  @apply bg-rose-200;
+}
+
+.landing-preview__light--amber {
+  @apply bg-amber-200;
+}
+
+.landing-preview__light--emerald {
+  @apply bg-emerald-200;
+}
+
+.landing-preview__content {
+  @apply space-y-4;
+}
+
+.landing-preview__columns {
+  @apply grid items-stretch gap-4 md:grid-cols-[0.9fr_1.1fr];
+}
+
+.landing-preview__panel {
+  @apply rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5;
+}
+
+.landing-preview__panel--steps {
+  @apply flex min-h-[14rem] flex-col;
+}
+
+.landing-preview__panel--dark {
+  @apply bg-gradient-to-br from-slate-900 via-slate-800 to-sky-800 text-white shadow-lg shadow-slate-300/30;
+}
+
+.landing-preview__label {
+  @apply text-xs font-semibold uppercase tracking-[0.16em] text-slate-500;
+}
+
+.landing-preview__label--dark {
+  @apply text-slate-300;
+}
+
+.landing-preview__label--spaced {
+  @apply mt-6;
+}
+
+.landing-preview__steps {
+  @apply mt-3 flex flex-1 flex-col justify-between gap-2 overflow-hidden;
+}
+
+.landing-preview__step {
+  @apply flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium leading-5 text-slate-700;
+}
+
+.landing-preview__step-number {
+  @apply inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-xs font-semibold text-white;
+}
+
+.landing-preview__chips {
+  @apply mt-4 flex flex-wrap gap-2;
+}
+
+.landing-preview__chip {
+  @apply rounded-full bg-white px-3 py-1.5 text-xs font-medium text-slate-700 ring-1 ring-slate-200;
+}
+
+.landing-preview__chip--dark {
+  @apply bg-slate-900 text-white ring-0;
+}
+
+.landing-preview__typed-box {
+  @apply mt-4 h-[14rem] overflow-y-auto rounded-[1.25rem] p-4;
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.landing-preview__typed-text {
+  @apply whitespace-pre-wrap text-[0.92rem] leading-6 text-slate-100;
+}
+
+.landing-preview__summary {
+  @apply mt-3 text-sm leading-7 text-slate-600;
+}
+
+.landing-feelings {
+  @apply mx-auto w-full max-w-6xl;
+}
+
+.landing-feelings__card {
+  @apply rounded-[2rem] border p-6 shadow-lg backdrop-blur sm:p-7;
+  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.82);
+}
+
+.landing-feelings__copy {
+  @apply mx-auto flex max-w-3xl flex-col items-center justify-center text-center;
+}
+
+.landing-feelings__title {
+  @apply text-3xl font-semibold text-slate-900 sm:text-4xl;
+}
+
+.landing-feelings__text {
+  @apply mt-4 max-w-2xl text-base leading-7 text-slate-600;
+}
+
+.landing-feelings__cta {
+  @apply mx-auto mt-6 block w-full max-w-[32rem] rounded-full bg-slate-900 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2;
+}
+
+@keyframes landing-feature-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.375rem));
+  }
+}
