@@ -102,7 +102,7 @@ function FeelingsExplorer({ onBackHome = () => {} }) {
               onClick={() => handleChooseMood('positive')}
               className="feelings-mood-card"
             >
-              <span className="feelings-mood-card__title">Good</span>
+              <span className="feelings-mood-card__title">Comfortable</span>
             </button>
 
             <button
@@ -110,7 +110,7 @@ function FeelingsExplorer({ onBackHome = () => {} }) {
               onClick={() => handleChooseMood('negative')}
               className="feelings-mood-card feelings-mood-card--negative"
             >
-              <span className="feelings-mood-card__title">Bad</span>
+              <span className="feelings-mood-card__title">Uncomfortable</span>
             </button>
           </div>
         </section>
@@ -120,9 +120,6 @@ function FeelingsExplorer({ onBackHome = () => {} }) {
         <section className="feelings-stack">
           <div className="feelings-panel">
             <div className="feelings-panel__intro">
-              <h2 className="feelings-panel__title">
-                {selectedMood === 'positive' ? 'Good' : 'Bad'} feelings
-              </h2>
               <p className="feelings-panel__subtitle">
                 Browse the categories below and choose the words that feel closest.
               </p>
