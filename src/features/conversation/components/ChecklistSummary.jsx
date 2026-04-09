@@ -35,6 +35,30 @@ function buildTopicLine(selectedTopics = [], customTopic = '') {
   return combined.length > 0 ? combined.join('; ') : 'something important'
 }
 
+function normalizeLeadingCapitalForSentence(text = '') {
+  return text.replace(/^([A-Z])(?=[a-z])/, (match) => match.toLowerCase())
+}
+
+function normalizeItemsForSentence(items = []) {
+  return items.map((item) => normalizeLeadingCapitalForSentence(item.trim()))
+}
+
+function buildTopicLineForMessage(selectedTopics = [], customTopic = '') {
+  const combined = [...selectedTopics]
+
+  if (customTopic.trim()) {
+    combined.push(customTopic.trim())
+  }
+
+  if (combined.length === 0) {
+    return 'something important'
+  }
+
+  return combined
+    .map((topic) => normalizeLeadingCapitalForSentence(topic.trim()))
+    .join('; ')
+}
+
 function buildUniversalMessage({
   audience,
   topics,
@@ -44,9 +68,15 @@ function buildUniversalMessage({
   understandings,
 }) {
   const toWho = audienceLabel(audience)
-  const topicLine = buildTopicLine(topics, customTopic)
+  const topicLine = buildTopicLineForMessage(topics, customTopic)
+  const needsLine = joinList(normalizeItemsForSentence(needs), 'patience and support')
+  const understandingsLine = joinList(
+    normalizeItemsForSentence(understandings),
+    'I am trying to explain this honestly',
+  )
+  const goalLine = normalizeLeadingCapitalForSentence((goal || 'to talk openly and be heard').trim())
 
-  return `Message to ${toWho}:\nI want to talk to you about ${topicLine}. What would help from you is ${joinList(needs, 'patience and support')}, and I want you to understand ${joinList(understandings, 'I am trying to explain this honestly')}. My goal for this conversation is ${goal || 'to talk openly and be heard'}.`
+  return `Message to ${toWho}:\nI want to talk to you about how ${topicLine}. What would help from you is ${needsLine}, and I want you to understand ${understandingsLine}. My goal for this conversation is ${goalLine}.`
 }
 
 function buildChecklist({ audience, topics, customTopic, needs, understandings, goal }) {
