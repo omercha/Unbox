@@ -119,5 +119,5 @@ There are currently no sets of unit or integration tests, so testing is manual i
 - No user account system or backend database is used.
 - Sensitive data handling is minimised by storing only local browser data.
 
-### GitHub Link
+### GitHub Link (for markers)
 To make this README.md file easier to read, consider visiting the public GitHub repository for the project at [https://github.com/omercha/Unbox](https://github.com/omercha/Unbox).
